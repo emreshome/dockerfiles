@@ -15,7 +15,7 @@ RUN curl -sSL http://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binari
 && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
 
 # Download an install Firefox
-RUN wget ftp://rpmfind.net/linux/fedora/linux/releases/27/Everything/x86_64/os/Packages/f/firefox-57.0-0.8.fc27.x86_64.rpm && dnf -y install firefox-57.0-0.8.fc27.x86_64.rpm && dnf clean all
+RUN wget ftp://rpmfind.net/linux/fedora/linux/releases/25/Everything/x86_64/os/Packages/f/firefox-49.0-2.fc25.x86_64.rpm && dnf -y install firefox-49.0-2.fc25.x86_64.rpm && dnf clean all
 
 #Download and install geckodriver
 RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.18.0/geckodriver-v0.18.0-linux64.tar.gz \
