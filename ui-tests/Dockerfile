@@ -26,8 +26,4 @@ RUN dnf -y --nogpgcheck install https://dl.google.com/linux/direct/google-chrome
 
 ENV M2_HOME /usr/share/maven
 
-RUN groupadd -g 1031 jenkins
-
-RUN useradd -m -d /home/jenkins -s /bin/bash -u 1030 -g 1031 jenkins
-
-RUN usermod -aG root jenkins
+RUN useradd -m -d /home/jenkins -s /bin/bash -u 1030 -g 0 root
