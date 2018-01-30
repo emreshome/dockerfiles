@@ -25,5 +25,6 @@ RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.18.0/geckod
 RUN dnf -y --nogpgcheck install https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
 
 ENV M2_HOME /usr/share/maven
+ENV HOME /home/jenkins
 RUN useradd -m -d /home/jenkins -s /bin/bash -u 1030 -g 0 jenkins
 RUN mkdir /root/.cache && chmod 777 /root && chmod 777 /root/.cache
