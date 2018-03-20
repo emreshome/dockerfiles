@@ -25,3 +25,5 @@ RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.18.0/geckod
 RUN dnf -y --nogpgcheck install http://dl.google.com/linux/chrome/rpm/stable/x86_64//google-chrome-stable-65.0.3325.162-1.x86_64.rpm
 
 ENV M2_HOME /usr/share/maven
+
+RUN chmod -R 777 /root
