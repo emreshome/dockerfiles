@@ -15,7 +15,7 @@ RUN curl -sSL http://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binari
 && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
 
 # Download an install Firefox
-RUN wget https://ftp.mozilla.org/pub/firefox/releases/56.0/linux-x86_64/en-US/firefox-56.0.tar.bz2  && tar jxf firefox-56.0.tar.bz2 -C /usr/share && ln -s /usr/share/firefox/firefox /usr/bin/firefox 
+RUN wget https://ftp.mozilla.org/pub/firefox/releases/59.0/linux-x86_64/en-US/firefox-59.0.tar.bz2  && tar jxf firefox-59.0.tar.bz2 -C /usr/share  && ln -s /usr/share/firefox/firefox /usr/bin/firefox
 
 #Download and install geckodriver
 RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.18.0/geckodriver-v0.18.0-linux64.tar.gz \
