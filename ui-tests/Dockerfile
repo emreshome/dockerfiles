@@ -22,7 +22,7 @@ RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.20.0/geckod
 && tar -xvzf geckodriver* && chmod +x geckodriver && mv geckodriver /usr/local/bin/
 
 
-RUN dnf -y --nogpgcheck install https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+RUN dnf -y --nogpgcheck install https://dl.google.com/linux/chrome/rpm/stable/x86_64/google-chrome-stable-67.0.3396.62-1.x86_64.rpm
 
 ENV M2_HOME /usr/share/maven
 
