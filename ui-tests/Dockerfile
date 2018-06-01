@@ -3,6 +3,9 @@ FROM fedora
 RUN dnf -y update && dnf clean all
 RUN dnf -y install initscripts xorg-x11-server-Xvfb wget git tar gzip bzip2 java java-devel && dnf clean all
 
+# some installations need access to /root
+RUN chmod -R 777 /root
+
 # set JAVA_HOME
 ENV JAVA_HOME /usr/lib/jvm/java-openjdk
 
@@ -25,5 +28,3 @@ RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.20.0/geckod
 RUN dnf -y --nogpgcheck install https://dl.google.com/linux/chrome/rpm/stable/x86_64/google-chrome-stable-67.0.3396.62-1.x86_64.rpm
 
 ENV M2_HOME /usr/share/maven
-
-RUN chmod -R 777 /root
